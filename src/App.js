@@ -7,10 +7,14 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   const fetchData = async () => {
-    const response = await axios.get("https://my-deli-back.herokuapp.com/");
-
-    setData(response.data);
-    setIsLoading(false);
+    try {
+      const response = await axios.get("https://my-deli-back.herokuapp.com/");
+      console.log(response.data);
+      setData(response.data);
+      setIsLoading(false);
+    } catch (error) {
+      console.log(error.response);
+    }
   };
 
   useEffect(() => {
