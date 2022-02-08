@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.big-wrapper,
+.restaurant-intro-container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.top-bar {
+  border-bottom: solid 1px black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  width: 100%;
+  background-color: aliceblue;
+}
+
+/* Header & Logo here */
+
+header img {
+  width: 150px;
+}
+
+nav {
+  width: 100%;
+  border-bottom: solid 1px black;
+}
+
+header {
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+/* restaurant title + description here */
+
+.restaurant-intro-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.restaurant-intro-left h2 {
+  margin-bottom: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.restaurant-intro-right img {
+  width: 350px;
+}
+
+/* menu here */
+
+.left-menu-container {
+  width: 100%;
+}
+
+.left-menu-container h3 {
+  margin: 20px 0;
+}
+
+.menu-card {
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  padding: 7px;
+}
+.menu-card:hover {
+  box-shadow: 0 0 2px 2px black;
+}
+
+.menu-item-left h4 {
+  margin-bottom: 10px;
+  width: 60%;
+}
+.nomeal {
+  width: 100%;
+}
+
+.menu-item-left p {
+  line-height: 20px;
+  height: 40px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.menu-item-right img {
+  width: 120px;
+  height: 120px;
+  border-radius: 5px;
+}
+
+.menu-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 2;
+  gap: 10px;
+  width: 60%;
+}
+
+.menu-card {
+  display: flex;
+  width: 400px;
+  max-width: 400px;
+  min-height: 150px;
+  flex-shrink: 0;
+  flex: calc(50% - 10px);
+}
+
+.menu-item-left {
+  width: 400px;
 }
